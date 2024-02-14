@@ -119,7 +119,7 @@ const App = ({ signOut }) => {
             <Text as="span">{note.description}</Text>
             {note.image && (
               <Image
-                src={note.image}
+                src={note.image.url}
                 alt={`visual aid for ${notes.name}`}
                 style={{ width: 400 }}
               />
@@ -127,6 +127,7 @@ const App = ({ signOut }) => {
             <Button variation="link" onClick={() => deleteNote(note)}>
               Delete note
             </Button>
+
           </Flex>
         ))}
       </View>
